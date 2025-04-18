@@ -1,0 +1,64 @@
+.signup-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#SignupForm {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: 50px auto;
+}
+
+
+#SignupForm h3 {
+    text-align: center;
+    color: #447ca7;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+
+#Formconatiner {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#Formconatiner input,
+#Formconatiner select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+#Formconatiner button {
+    background-color: #4b91d3;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#Formconatiner button:hover {
+    background-color: #357ab8;
+}
+
+
+#Formconatiner label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,37 @@
+.login-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  #loginform {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 350px;
+  }
+  
+  #loginform h3 {
+    text-align: center;
+    color: #447ca7;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+#formconatiner button {
+    background-color: #4b91d3;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+#formconatiner button:hover {
+    background-color: #357ab8;
+}

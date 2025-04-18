@@ -1,0 +1,32 @@
+
+.custom-navbar {
+    background-color: white !important;
+    min-height: 70px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    font-weight: bolder;
+  }
+#btn a{
+    text-decoration: none;
+    color: white;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #6f42c1 !important; 
+  text-decoration: underline;
+  transition: color 0.6s ease;
+  font-weight: bolder;
+}
+#btn{
+  border: none;
+  display: flex;
+  gap:10px
+}
+#btn Button{
+  background-color:rgb(80,51,104);
+  border-radius: 12px;
+}
+.custom-navbar .btn {
+  margin-left: 10px;
+}

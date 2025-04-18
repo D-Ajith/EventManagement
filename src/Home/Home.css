@@ -1,0 +1,150 @@
+/* .carousel-img {
+    height: 500px;
+    object-fit: cover;
+  }
+  .img-icon{
+    height:94px;
+    width:94px
+  }
+.home{
+  text-align: center;
+}
+
+.homefirst Button{
+  width:200px;
+  height:70px;
+  border-radius: 12px;
+}
+.homebigday{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+h2{
+  text-align: center;
+}
+.step{
+  width:260px;
+  height:200px;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(234,236,240);
+}
+.step:hover{
+  box-shadow:10px 10px 10px gray;
+}
+.carousel-img {
+    width: 100% !important;
+    object-fit: cover !important;
+  } */
+
+  
+  .home {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #fff;
+    padding-bottom: 3rem;
+  }
+  
+  .carousel-img {
+    height: 90vh;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  .homefirst {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #f8f9fa;
+  }
+  
+  .homefirst h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #155724;
+  }
+  
+  .homefirst p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #555;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .homevision {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .homevision h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1rem;
+  }
+  
+  .homevision p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+  
+  .homebigday {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    background-color: #f1f1f1;
+  }
+  
+  .homebigday h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 2rem;
+  }
+  
+  .step {
+    flex: 1 1 200px;
+    max-width: 220px;
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .step:hover {
+    transform: translateY(-5px);
+  }
+  
+  .img-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .step h4 {
+    font-size: 1.2rem;
+    color: #198754;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step p {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  

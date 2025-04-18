@@ -1,0 +1,74 @@
+*{
+    margin-bottom: 0px !important ;
+}
+.showcase-img{
+    width: 240px;
+    height:240px
+}
+.aboutus{
+    text-align: center;
+}
+
+
+
+.aboutus {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    padding: 3rem 2rem;
+  }
+  
+  .aboutpart {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .aboutpart h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #198754;
+    margin-bottom: 1rem;
+  }
+  
+  .aboutpart p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .aboutpart img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aboutpart2 {
+    margin-top: 2rem;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .aboutpart2 h2 {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+  }
+  
+  .aboutpart2 ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .aboutpart2 li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.5rem;
+  }
+  

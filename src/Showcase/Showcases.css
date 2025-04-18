@@ -1,0 +1,59 @@
+.showcase-section {
+    background: url('') repeat  center;
+    color: black;
+    text-align: center;
+  }
+  .text-muted{
+    color:black !important;
+  }
+  .showcase-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .polaroid-frame {
+    background: white;
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Tape style */
+  .polaroid-frame .tape {
+    width: 40px;
+    height: 40px;
+    background: #ccc;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  .polaroid-row {
+    gap: 12rem; /* increase to desired space */
+    margin-bottom: 5rem;
+  }
+  
+  /* Rotations */
+  .rotate-0 { transform: rotate(-5deg); }
+  .rotate-1 { transform: rotate(3deg); }
+  .rotate-2 { transform: rotate(-2deg); }
+  .rotate-3 { transform: rotate(5deg); }
+  
+  .polaroid-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .polaroid-frame:hover {
+    transform: scale(1.05);
+    z-index: 2;
+  }
+  

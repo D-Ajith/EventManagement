@@ -1,0 +1,38 @@
+.footer{
+    margin-top: 10px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color:white;
+    padding: 30px;
+}
+.topdiv{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.footerdescp{
+    width:400px;
+    height:175px
+}
+.footersection{
+    display: flex;
+    gap:10px
+}
+.footeremail,.footercont{
+    width:250px;
+    height: 86px;
+    background-color: #fff;
+    color: black;
+    border-radius: 12px;
+    text-align: center;
+}
+.footeremail a, .footercont a{
+    text-decoration: none;
+    color:black;
+    font-weight: 600;
+}
+.footeremail a:hover, .footercont a:hover{
+    text-decoration: underline;
+}
+#footerbtm{
+    text-align: center;
+}
