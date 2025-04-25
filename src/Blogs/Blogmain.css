@@ -1,0 +1,76 @@
+.blog-section {
+    padding: 2rem 1rem;
+    background: #fff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .blogs {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  .blogs h2 {
+    font-size: 2rem;
+    color: #198754;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blogs > img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Blog1,
+  .Blog2 {
+    display: inline-block;
+    width: 280px;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .Blog1:hover,
+  .Blog2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Blog1 img,
+  .Blog2 img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .Blog1 p,
+  .Blog2 p {
+    font-size: 1rem;
+    color: #198754;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .Blog1, .Blog2 {
+      width: 90%;
+      margin: 1rem auto;
+    }
+  
+    .blogs > img {
+      height: auto;
+    }
+  }
+  

@@ -8,7 +8,7 @@ const Blogs2 = () => {
         navigate(path);
     };
     return (
-        <section>
+        <section className="blog-section">
             <div>
 
                 <>

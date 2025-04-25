@@ -14,21 +14,23 @@ const GrandWedding = () => {
     const handleclick =(item)=>{
         navigate(`/details/${item.id}`,{state:item})
     }
-    return (
-
-        <div>
-            
+    return (       
             <div className="image-container">
                 <h3>GrandWedding</h3>
                 <p>We specialize in curating bespoke weddings, handling every detail from planning to execution. Ajith Event Management ensures a stress-free journey to your special day, delivering timeless and beautifully crafted events.
                 </p>
+                <div className="image-grid">
                 {data
                     .filter((x) => x.category === "Grand Wedding")
                     .map((x, index) => (
+                        <div key={index} className="event-item">
                         <img key={index} src={x.image} loading='lazy' alt="" onClick={()=>handleclick(x)}  style={{ cursor: 'pointer' }}/>
+                        <p>{x.hallName}</p>
+                        </div>
                     ))}
+                </div>
             </div>
-        </div>
+      
 
 
     )

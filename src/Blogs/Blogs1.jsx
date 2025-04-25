@@ -9,7 +9,7 @@ const Blogs1 = () => {
         navigate(path);
     };
     return (
-        <section>
+        <section className="blog-section">
             <div>
                 <div>
                     <h2>How Ajith Events Can Simplify Your Event Planning Process</h2>

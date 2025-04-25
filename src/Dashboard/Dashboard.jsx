@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Button, Table } from "react-bootstrap";
 import { db } from "../Firebase/Fbconfig";
 import { ref, onValue, set } from "firebase/database";
-import Footer from "../Footer/Footer";
 import emailjs from '@emailjs/browser';
+import Adminsidebar from "../Adminsidebar/Adminsidebar"
 import "./Dashboard.css"
 
 const Dashboard = () => {
@@ -60,15 +60,17 @@ const Dashboard = () => {
     const handleReject = (booking) => sendEmail(booking, 'rejected');
     const handleNavigate = useNavigate();
     return (
-
-        <div>
+        <div className="dashboard-layout">
+        <div className="sidebar-wrapper">
+             <Adminsidebar/>
+        </div>
+            <div className="main-wrapper">
             <div className="dashboard-header">
-                <h3>Ajith Events</h3>
                 <h4 onClick={() => handleNavigate('/home')}>DASHBOARD</h4>
-                <h5>EVENT MANGEMENT</h5>
-                <h5>EVENT LIST</h5>
+               
             </div>
-            <Table striped bordered hover>
+            <div className="table-wrapper">
+            <Table striped bordered hover responsive>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -102,8 +104,9 @@ const Dashboard = () => {
                     ))}
                 </tbody>
             </Table>
-            <Footer />
+            </div>
         </div>
+    </div>
 
 
     );

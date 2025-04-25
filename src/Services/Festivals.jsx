@@ -16,17 +16,21 @@ const Festivals = () => {
   }
   return (
 
-    <div>
+    
       <div className="image-container">
         <h3>Festivals</h3>
         <p>Ajith Event Management brings festivals to life with vibrant themes, seamless coordination, and joyful celebrations. From cultural fests to seasonal carnivals, we craft immersive experiences that capture the spirit of the occasion and leave lasting impressions on every guest.</p>
+        <div className="image-grid">
         {data
           .filter((x) => x.category === "Festivals")
           .map((x, index) => (
-            <img key={index} src={x.image} loading='lazy' alt="" width="250px" height="250px" onClick={()=>handleclick(x)}  style={{ cursor: 'pointer' }}/>
+            <div key={index} className="event-item">
+                        <img key={index} src={x.image} loading='lazy' alt="" onClick={()=>handleclick(x)}  style={{ cursor: 'pointer' }}/>
+                        <p>{x.hallName}</p>
+            </div>
           ))}
+          </div>
       </div>
-    </div>
 
   )
 }

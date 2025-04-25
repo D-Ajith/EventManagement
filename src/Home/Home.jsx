@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import "./Home.css"
-import {Carousel, Button } from 'react-bootstrap';
+import { Carousel, Button } from 'react-bootstrap';
 const Home = () => {
   const loc = useLocation();
-  const handleNavigate=useNavigate();
+  const handleNavigate = useNavigate();
 
   const [loggedInPerson, setLoggedInPerson] = useState(localStorage.getItem('loggedInPerson') || 'Guest');
 
@@ -20,36 +20,54 @@ const Home = () => {
     <div className='home'>
 
       <div style={{ padding: 0, margin: 0 }}>
-        <Carousel fade>
-          <Carousel.Item>
-            <img
-              src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXZlbnQlMjBwbGFubmluZ3xlbnwwfHwwfHx8MA%3D%3D"
-              alt=""
-              className="d-block w-100 img-fluid carousel-img"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              src="https://www.eventpro.net/images/fairground-exhibition-event-management-software.jpg"
-              alt=""
-              className="d-block w-100 img-fluid carousel-img"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              src="https://magica.in/media/posts/17/PN_Day2_Wedding_306.jpeg"
-              alt=""
-              className="d-block w-100 img-fluid carousel-img"
-            />
-          </Carousel.Item>
-        </Carousel>
+      <Carousel fade>
+  <Carousel.Item>
+    <video
+      className="d-block w-100 img-fluid carousel-video"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="https://videos.pexels.com/video-files/31575321/13456306_2560_1440_25fps.mp4" type="video/mp4" />
+      
+    </video>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <video
+      className="d-block w-100 img-fluid carousel-video"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="https://videos.pexels.com/video-files/9474518/9474518-uhd_2732_1440_30fps.mp4" type="video/mp4" />
+      
+    </video>
+  </Carousel.Item>
+
+  <Carousel.Item>
+    <video
+      className="d-block w-100 img-fluid carousel-video"
+      autoPlay
+      loop
+      muted
+      playsInline
+    >
+      <source src="https://videos.pexels.com/video-files/31501470/13430911_1920_1080_60fps.mp4" type="video/mp4" />
+     
+    </video>
+  </Carousel.Item>
+</Carousel>
+
       </div>
 
       <section>
         <div className='homefirst'>
           <h2>Premier Event Planning for Grand Weddings, Joyous Haldi, Vibrant Festivals, Elite Corporate Events, and Unforgettable Private Parties</h2>
           <p>Your Trusted Partner for Exceptional Corporate Events and Memorable Weddings. From seamless corporate planning to breathtaking wedding celebrations, we bring your vision to life with precision and creativity</p>
-          <Button onClick={()=>handleNavigate('/form')} variant='success'>Plan Your Event Today</Button>
+          <Button onClick={() => handleNavigate('/form')} variant='success'>Plan Your Event Today</Button>
         </div>
         <div className='homevision'>
           <h2>Our Vision</h2>

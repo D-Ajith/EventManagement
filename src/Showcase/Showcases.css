@@ -36,11 +36,11 @@
     z-index: 1;
   }
   .polaroid-row {
-    gap: 12rem; /* increase to desired space */
+    gap: 12rem; 
     margin-bottom: 5rem;
   }
   
-  /* Rotations */
+
   .rotate-0 { transform: rotate(-5deg); }
   .rotate-1 { transform: rotate(3deg); }
   .rotate-2 { transform: rotate(-2deg); }

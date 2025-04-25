@@ -1,4 +1,3 @@
-// Showcase.js
 import React from 'react';
 import "./Showcases.css"
 

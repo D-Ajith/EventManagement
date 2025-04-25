@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Img1 from "../Images/img1.png"
+import "./Blogmain.css"
 const Blogs = () => {
     const navigate = useNavigate();
 
@@ -8,7 +9,7 @@ const Blogs = () => {
       navigate(path);
     };
   return (
-<section>
+<section className="blog-section">
 <div className='blogs'>
         <h2>Blogs</h2>
      <img src={Img1} alt="" width="80%" height="700"/>

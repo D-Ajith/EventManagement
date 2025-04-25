@@ -1,38 +1,155 @@
-.footer{
+.footer {
     margin-top: 10px;
     background: linear-gradient(135deg, #6e8efb, #a777e3);
-    color:white;
+    color: white;
     padding: 30px;
-}
-.topdiv{
+    box-sizing: border-box;
+  }
+  
+  .topdiv {
     display: flex;
     justify-content: space-around;
     padding: 10px;
-}
-.footerdescp{
-    width:400px;
-    height:175px
-}
-.footersection{
+    flex-wrap: wrap;
+  }
+  
+  .footerdescp {
+    width: 400px;
+    height: 175px;
+  }
+  
+  .footerdescp h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .footerdescp p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .footersection {
     display: flex;
-    gap:10px
-}
-.footeremail,.footercont{
-    width:250px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .footeremail,
+  .footercont {
+    width: 250px;
     height: 86px;
     background-color: #fff;
     color: black;
     border-radius: 12px;
     text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .footeremail h5,
+  .footercont h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .footeremail a,
+.footercont a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-block;
+  word-break: break-word; /* Breaks long words like email addresses */
+  overflow-wrap: anywhere; /* Ensures wrapping happens even mid-word if needed */
 }
-.footeremail a, .footercont a{
-    text-decoration: none;
-    color:black;
-    font-weight: 600;
-}
-.footeremail a:hover, .footercont a:hover{
+  
+  .footeremail a:hover,
+  .footercont a:hover {
     text-decoration: underline;
-}
-#footerbtm{
+  }
+  
+  #footerbtm {
     text-align: center;
-}
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  /* ------------------- Media Queries ------------------- */
+  
+  /* Medium Devices - Tablets */
+  @media screen and (max-width: 991px) {
+    .footerdescp {
+      width: 100%;
+      height: auto;
+      text-align: center;
+    }
+  
+    .footerdescp h4 {
+      font-size: 22px;
+    }
+  
+    .footerdescp p {
+      font-size: 15px;
+    }
+  
+    .footeremail,
+    .footercont {
+      width: 45%;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+  
+    .footeremail h5,
+    .footercont h5 {
+      font-size: 15px;
+    }
+  
+    .footeremail a,
+    .footercont a {
+      font-size: 14px;
+    }
+  }
+  
+  /* Small Devices - Mobiles */
+  @media screen and (max-width: 600px) {
+    .topdiv {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footersection {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footeremail,
+    .footercont {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .footerdescp h4 {
+      font-size: 20px;
+    }
+  
+    .footerdescp p {
+      font-size: 14px;
+    }
+  
+    .footeremail h5,
+    .footercont h5 {
+      font-size: 14px;
+    }
+  
+    .footeremail a,
+    .footercont a {
+      font-size: 13px;
+    }
+  
+    #footerbtm {
+      font-size: 12px;
+    }
+  }
+  
