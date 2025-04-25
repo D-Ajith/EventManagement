@@ -63,7 +63,7 @@ const Authentication = () => {
 
       {/* Footer */}
       <div className="footer-section">
-        <p>Made with ❤️ by AjithEvents Team</p>
+        <p style={{color:'white'}}>Made with ❤️ by AjithEvents Team</p>
       </div>
     </div>
   );
