@@ -8,14 +8,18 @@ const Gallery = () => {
 
   useEffect(() => {
     axios
-      .get('https://api.allorigins.win/raw?url=https://api.jsonbin.io/v3/b/67fd53fc8960c979a5850737')
+      axios.get("https://api.jsonbin.io/v3/b/67fd53fc8960c979a5850737", {
+  headers: {
+    "X-Master-Key": "<YOUR_JSONBIN_SECRET_KEY>"
+  }
+})
       .then((res) => {
         setImages(res.data.record);
-        setLoading(false); // Set loading to false when images are fetched
+        setLoading(false); 
       })
       .catch((err) => {
         console.log(err);
-        setLoading(false); // Set loading to false on error as well
+        setLoading(false); 
       });
   }, []);
 

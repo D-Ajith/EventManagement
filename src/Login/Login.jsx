@@ -7,13 +7,13 @@ import { ref, get } from 'firebase/database';
 import "./Login.css"
 
 const Login = () => {
+
   const navigate = useNavigate();
   const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
 
   const handleDetails = (e) => {
     setLoginDetails({ ...loginDetails, [e.target.name]: e.target.value });
   };
-
   const handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = loginDetails;
@@ -44,22 +44,29 @@ const Login = () => {
 
   return (
 
-<div className='login-wrapper'>
-<div id="loginform">
-  <h3>Login</h3>
-      <Form onSubmit={handleLogin} id="formconatiner">
-        <Form.Group className="mb-3">
-          <Form.Label>Email:</Form.Label>
-          <Form.Control type='email' name='email' value={loginDetails.email} onChange={handleDetails} required />
-        </Form.Group>
-        <Form.Group className="mb-3">
-          <Form.Label>Password:</Form.Label>
-          <Form.Control type='password' name='password' value={loginDetails.password} onChange={handleDetails} required />
-        </Form.Group>
-        <Button variant="primary" type='submit'>Login</Button>
-      </Form>
+    <div className='login-wrapper'>
+      <div id="loginform">
+        <h3>Login</h3>
+        <Form onSubmit={handleLogin} id="formconatiner">
+          <Form.Group className="mb-3">
+            <Form.Label>Email:</Form.Label>
+            <Form.Control type='email' name='email' value={loginDetails.email} onChange={handleDetails} required />
+          </Form.Group>
+          <Form.Group className="mb-3">
+            <Form.Label>Password:</Form.Label>
+            <Form.Control type='password' name='password' value={loginDetails.password} onChange={handleDetails} required />
+          </Form.Group>
+          <Button variant="primary" type='submit'>Login</Button>
+          <Button variant="success" className='mt-2' onClick={() => {
+            localStorage.setItem("loggedInPerson", "Guest");
+            localStorage.setItem("loggedInPersonRole", "guest");
+            navigate("/home", { state: { personData: { name: "Guest" }, role: "guest" } });
+          }}>
+            Continue as Guest
+          </Button>
+        </Form>
+      </div>
     </div>
-</div>
 
   );
 };

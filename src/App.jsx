@@ -44,12 +44,16 @@ const App = () => {
     return <h1>Loadig pls wait a moment......</h1>
   }
   const hideNavbarPaths = ['/','/dashboard','/signup', '/login'];
+  const isAuthenticated = () => {
+  const user = localStorage.getItem("loggedInPerson");
+  return !!user;
+};
   return (
     <div>
        {!hideNavbarPaths.includes(location.pathname) && <Navbar1 />}
       <Routes>
         <Route path='/' element={<Authentication />} /> 
-        <Route path='/home' element={user ? <Home /> : <Navigate to="/login" />} />
+        <Route path='/home' element={isAuthenticated() ? <Home /> : <Navigate to="/login" />} />
         <Route path='/about' element={<AboutUs />} />
         <Route path='/services' element={<Services />} />
         <Route path='/gallery' element={<Gallery />} />

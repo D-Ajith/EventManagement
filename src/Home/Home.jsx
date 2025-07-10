@@ -15,52 +15,39 @@ const Home = () => {
       setLoggedInPerson(loc.state.personData.name);
     }
   }, [loc.state]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
+  const handleSelect = (selectedIndex) => {
+    setActiveIndex(selectedIndex);
+  };
+
+  const videoSources = [
+    "https://videos.pexels.com/video-files/9474518/9474518-uhd_2732_1440_30fps.mp4",
+    "https://videos.pexels.com/video-files/31575321/13456306_2560_1440_25fps.mp4",
+    "https://videos.pexels.com/video-files/31501470/13430911_1920_1080_60fps.mp4",
+  ];
   return (
     <div className='home'>
 
       <div style={{ padding: 0, margin: 0 }}>
-      <Carousel fade>
-  <Carousel.Item>
-    <video
-      className="d-block w-100 img-fluid carousel-video"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
-      <source src="https://videos.pexels.com/video-files/31575321/13456306_2560_1440_25fps.mp4" type="video/mp4" />
-      
-    </video>
-  </Carousel.Item>
-
-  <Carousel.Item>
-    <video
-      className="d-block w-100 img-fluid carousel-video"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
-      <source src="https://videos.pexels.com/video-files/9474518/9474518-uhd_2732_1440_30fps.mp4" type="video/mp4" />
-      
-    </video>
-  </Carousel.Item>
-
-  <Carousel.Item>
-    <video
-      className="d-block w-100 img-fluid carousel-video"
-      autoPlay
-      loop
-      muted
-      playsInline
-    >
-      <source src="https://videos.pexels.com/video-files/31501470/13430911_1920_1080_60fps.mp4" type="video/mp4" />
-     
-    </video>
-  </Carousel.Item>
-</Carousel>
-
+        <Carousel activeIndex={activeIndex} onSelect={handleSelect} fade>
+          {videoSources.map((src, index) => (
+            <Carousel.Item key={index}>
+              {activeIndex === index ? (
+                <video
+                  className="d-block w-100 img-fluid carousel-video"
+                  autoPlay
+                  muted
+                  playsInline
+                >
+                  <source src={src} type="video/mp4" />
+                </video>
+              ) : (
+                <div style={{ height: "500px", backgroundColor: "#000" }} />
+              )}
+            </Carousel.Item>
+          ))}
+        </Carousel>
       </div>
 
       <section>
