@@ -17,31 +17,43 @@ const Signup= () => {
     const handleDetails = (e) => {
         setSignUpDetails({ ...signUpDetails, [e.target.name]: e.target.value })
     }
-    const handleSubmitSignup = async (e) => {
-        e.preventDefault()
-        const { name, email, password, role } = signUpDetails;
+   const handleSubmitSignup = async (e) => {
+    e.preventDefault();
+    const { name, email, password, role } = signUpDetails;
 
-        try {
-            const signupUser = await createUserWithEmailAndPassword(author, email, password)
-            console.log(signupUser)
-            const signupuserCred = signupUser.user
-            await updateProfile(signupuserCred, {
-                displayName: name
-            })
-            let roleType = role === "admin" ? "admins" : "users"
-            alert("signup done successfully!!!")
-            navigate("/login")
-            await set(ref(db, `${roleType}/${name}`), {
-                name: name,
-                email: email,
-                id: signupUser.user.uid,
-                role: role
-            })
-        }
-        catch (err) {
-            console.log(err)
+    try {
+        const signupUser = await createUserWithEmailAndPassword(author, email, password);
+        const signupuserCred = signupUser.user;
+
+        await updateProfile(signupuserCred, {
+            displayName: name
+        });
+
+        let roleType = role === "admin" ? "admins" : "users";
+
+        await set(ref(db, `${roleType}/${name}`), {
+            name: name,
+            email: email,
+            id: signupUser.user.uid,
+            role: role
+        });
+
+        alert("Signup successful!");
+        navigate("/login");
+
+    } catch (err) {
+        console.log(err);
+        if (err.code === 'auth/email-already-in-use') {
+            alert("Email is already in use. Please try a different one or login.");
+        } else if (err.code === 'auth/invalid-email') {
+            alert("Invalid email address.");
+        } else if (err.code === 'auth/weak-password') {
+            alert("Password should be at least 6 characters.");
+        } else {
+            alert("Signup failed. Please try again.");
         }
     }
+}
     return (
 
 <div className="signup-wrapper">

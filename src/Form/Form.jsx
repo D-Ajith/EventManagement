@@ -47,20 +47,6 @@ const Form1 = () => {
             }));
         }
     }, [location.state]);
-
-    // const handleDetails = (e) => {
-    //     setBookingDetails({ ...bookingDetails, [e.target.name]: e.target.value });
-    // };
-    // const handleDetails = (e) => {
-    //     const { name, value } = e.target;
-
-    //     if (name === "eventType") {
-    //         setBookingDetails({ ...bookingDetails, eventType: value, hallname: "" });
-    //         setAvailableHalls(eventOptions[value] || []);
-    //     } else {
-    //         setBookingDetails({ ...bookingDetails, [name]: value });
-    //     }
-    // };
     const handleDetails = (e) => {
         const { name, value } = e.target;
 
@@ -130,10 +116,6 @@ const Form1 = () => {
                             <option value="festival">Festival</option>
                         </Form.Select>
                     </Form.Group>
-                    {/* <Form.Group>
-                        <Form.Label>Location:</Form.Label>
-                        <Form.Control type='text' name='location' value={bookingDetails.location} onChange={handleDetails} placeholder="Enter your location" required />
-                    </Form.Group> */}
                     <Form.Group>
                         <Form.Label>Location:</Form.Label>
                         <Form.Select name='location' value={bookingDetails.location} onChange={handleDetails} required>
@@ -152,11 +134,6 @@ const Form1 = () => {
                             ))}
                         </Form.Select>
                     </Form.Group>
-
-                    {/* <Form.Group>
-                        <Form.Label>Number of Guests:</Form.Label>
-                        <Form.Control type='text' name='guests' value={bookingDetails.guests} onChange={handleDetails} placeholder="Enter number of guests" required />
-                    </Form.Group> */}
                     <Form.Group>
                         <Form.Label>Number of Guests:</Form.Label>
                         <Form.Select name="guests" value={bookingDetails.guests} onChange={handleDetails} required>
@@ -173,11 +150,6 @@ const Form1 = () => {
                             <option value="1000+">1000+</option>
                         </Form.Select>
                     </Form.Group>
-                    {/* <Form.Group>
-                        <Form.Label>Budget:</Form.Label>
-                        <Form.Control type='text' name='budget' value={bookingDetails.budget} onChange={handleDetails} placeholder="Enter Budget" required />
-                    </Form.Group>
-                    */}
                     <Form.Group>
                         <Form.Label>Budget:</Form.Label>
                         <Form.Select name="budget" value={bookingDetails.budget} onChange={handleDetails} required>

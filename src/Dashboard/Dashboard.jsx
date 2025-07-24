@@ -175,11 +175,13 @@ const Dashboard = () => {
                                     <td>{booking.budget}</td>
                                     <td>{booking.date}</td>
                                     <td>{booking.status || 'Pending'}</td>
-
                                     <td>
-                                        <Button variant="success" onClick={() => handleAccept(booking)}>Accept</Button>{' '}
-                                        <Button variant="danger" onClick={() => handleReject(booking)}>Reject</Button>
+                                        <div className="action-buttons">
+                                            <Button className="btn-accept" onClick={() => handleAccept(booking)}>Accept</Button>
+                                            <Button className="btn-reject" onClick={() => handleReject(booking)}>Reject</Button>
+                                        </div>
                                     </td>
+
                                 </tr>
                             ))}
                         </tbody>

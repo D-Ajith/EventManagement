@@ -42,19 +42,22 @@
 
 
 #Formconatiner button {
-    background-color: #4b91d3;
-    color: white;
-    border: none;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
+    background-color: white;
+  color: #a777e3;
+  border: 2px solid #a777e3;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 #Formconatiner button:hover {
-    background-color: #357ab8;
+     background-color:  #9c5dea; 
+  color: white; 
+  border-color: #a777e3;
 }
 
 

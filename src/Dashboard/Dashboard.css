@@ -94,17 +94,64 @@
   padding: 12px 15px;
 }
 
-/* Buttons */
-.btn {
-  padding: 6px 12px;
-  font-size: 0.85rem;
-  border-radius: 6px;
-  margin: 2px;
+/* Flex container for Accept/Reject buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap; 
+  justify-content: center;
 }
 
-/* Responsive Adjustments */
+.table td, .table th {
+  padding: 10px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+/* Button Container */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Tablets (768px and up) */
+/* Equal width buttons */
+.action-buttons .btn-accept,
+.action-buttons .btn-reject {
+  flex: 1 1 100px;  /* Flex-grow and min width */
+  text-align: center;
+  min-width: 100px;
+  padding: 6px 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Accept Button Style */
+.btn-accept {
+  background-color: white;
+  color: #198754;
+  border: 2px solid #198754;
+}
+
+.btn-accept:hover {
+  border-color: #28a745;
+  background-color: rgba(9, 161, 90, 0.947);
+}
+
+/* Reject Button Style */
+.btn-reject {
+  background-color: white;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+}
+
+.btn-reject:hover {
+  border-color: #e60023;
+  background-color: rgba(233, 33, 53, 0.932);
+}
+
 @media (min-width: 768px) {
   .dashboard-layout {
     flex-direction: row;
